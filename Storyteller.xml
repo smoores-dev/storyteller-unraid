@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Storyteller</Name>
-  <Repository>registry.gitlab.com/smoores/storyteller:latest</Repository>
-  <Registry>https://gitlab.com/smoores/storyteller/-/releases</Registry>
+  <Repository>registry.gitlab.com/storyteller-platform/storyteller:latest</Repository>
+  <Registry>https://gitlab.com/storyteller-platform/storyteller/-/releases</Registry>
   <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
   <Support/>
-  <Project>https://smoores.gitlab.io/storyteller</Project>
+  <Project>https://storyteller-platform.gitlab.io/storyteller</Project>
   <Overview>Storyteller is a self-hosted platform for creating and reading ebooks with guided narration. It's made up of two components: the alignment server, and the mobile apps. Together, these components allow you to take audiobooks and ebooks that you already own and automatically align them, as well as read or listen to (or both!) the resulting aligned books.&#xD;
 &#xD;
 Align your audiobooks and ebooks&#xD;
@@ -34,7 +34,7 @@ To enable AMD GPU support, ensure that you have installed the Radeon-TOP plugin.
   <Category>Other: MediaApp:Books MediaServer:Books Status:Stable</Category>
   <WebUI>http://[IP]:[PORT:8001]/</WebUI>
   <TemplateURL/>
-  <Icon>https://gitlab.com/smoores/storyteller/-/raw/main/docs/static/img/Storyteller_Logo.png?ref_type=heads&amp;amp;inline=false</Icon>
+  <Icon>https://gitlab.com/storyteller-platform/storyteller/-/raw/main/docs/static/img/Storyteller_Logo.png?ref_type=heads&amp;amp;inline=false</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
@@ -45,7 +45,7 @@ To enable AMD GPU support, ensure that you have installed the Radeon-TOP plugin.
         Radeon-TOP plugin (AMD Support)</Requires>
   <Config Name="App Data" Target="/data" Default="/mnt/user/appdata/storyteller" Mode="rw" Description="Where to store the Storyteller sqlite db file and media assets (the uploaded and aligned EPUB and audio files)" Type="Path" Display="always" Required="true" Mask="false"/>
   <Config Name="Data directory" Target="STORYTELLER_DATA_DIR" Default="/data" Mode="" Description="Where Storyteller should look for the data directory _within_ the container. This should match the Container path for the App Data path -- there's no need to change it." Type="Variable" Display="advanced" Required="true" Mask="false">/data</Config>
-  <Config Name="Auth secret" Target="STORYTELLER_SECRET_KEY" Default="" Mode="" Description="A cryptographically random secret key, used to encrypt Storyteller's authentication tokens. See the docs here https://smoores.gitlab.io/storyteller/docs/getting-started#docker-compose for guidance." Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="Auth secret" Target="STORYTELLER_SECRET_KEY" Default="" Mode="" Description="A cryptographically random secret key, used to encrypt Storyteller's authentication tokens. See the docs here https://storyteller-platform.gitlab.io/storyteller/docs/getting-started#docker-compose for guidance." Type="Variable" Display="always" Required="true" Mask="true"/>
   <Config Name="Web server port" Target="8001" Default="8001" Mode="tcp" Description="The port that the web server will listen on" Type="Port" Display="always" Required="true" Mask="false">8001</Config>
   <Config Name="Radeon driver version override" Target="HSA_OVERRIDE_GFX_VERSION" Default="10.3.0" Mode="" Description="If you have an AMD GPU that has a driver version that is unsupported by your Unraid AMD driver, you may be able to work around it by setting this variable to a supported version number. E.g. for an AMD Radeon RX 6700 XT, this value must be set to 10.3.0" Type="Variable" Display="advanced" Required="false" Mask="false"/>
 </Container>
